@@ -2,12 +2,12 @@
 A ETHO Protocol ERC20 token generator, issue your own token on ETHO with just a few clicks.
 
 ## Live
-[https://token.exlo.no/](https://token.exlo.no/)
+[https://token.ethoprotocol.com/](https://token.ethoprotocol.com/)
 
 ## Installation
 
 ```
-git clone https://github.com/Exlo84/etho-token-generator.git
+git clone https://github.com/Ether1Project/etho-token-generator.git
 npm install
 npm start
 ```
