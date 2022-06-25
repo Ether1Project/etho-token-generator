@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ETHO Protocol Token (ERC20) Generator</title>
+    <!--CDN for Bootstrap 4-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!--CDN for Animation-->
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <!--Main Stylesheet-->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet"  href="assets/toastr/css/toastr.min.css"></script>
+    <!--Link for Material Icon-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon.png">
+</head>
+<body>
+<div class="hero is-primary">
+    <div class="hero-body">
+        <div class="col-lg-12 align-self-center">
+        <h2 style="color: #fff">ETHO Protocol Token (ERC20) Generator</h2>
+        </div>
+    </div>
+    </div>
+<div class="container-first">
+    <div class="row wrap-form animated fadeInDown">
+         
+        <div class="col-12 align-self-end " style="height:32px" >  
+
+            <i class="material-icons metamask-span" style="display:none" id="icon-locked">lock</i>
+            <i class="material-icons metamask-span" style="display:none" id="icon-unlocked">lock_open</i>
+            <span class="metamask-text hide" id="metamask-locked">Metamask Locked</span>
+            <span class="metamask-text hide" id="metamask-unlocked">Metamask Unlocked</span>
+        </div> 
+        <!--Asset Generator Form-->
+        <div class="col-12 align-self-center" style="height:110px"> 
+            <!--Content to be Displayed when metamask is not available-->
+            <p class="content" id="metamask-status"></p>
+            <!--When you are connected to mainnet-->
+            <p class="content hide" id="current-address" align="center"></p>
+            <p class="content hide" id="current-network" align="center"></p>
+        </div>
+        <div class="col-12 align-self-center">
+            <form id="asset-form">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="name" tabindex="1" placeholder="Name" required oninvalid="setCustomValidity('Please Enter Name');" oninput="setCustomValidity('');" required>
+                    <a href="javascript:void(0)"  onclick="showNameTip()">  <i id="info-name" class="material-icons info">info</i></a>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="symbol" tabindex="2" placeholder="Symbol" oninvalid="setCustomValidity('Please Enter Symbol');" oninput="setCustomValidity('');" required>
+                    <a href="javascript:void(0)" onclick="showSymbolTip()"><i id="info-symbol" class="material-icons info">info</i></a>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" maxlength="2" tabindex="3" id="decimals" oninvalid="setCustomValidity('Please Enter Decimals');" oninput="setCustomValidity('');"  placeholder="Decimals" required>
+                    <a href="javascript:void(0)"  onclick="showDecimalTip()"><i id="info-decimal" class="material-icons info">info</i></a>                    
+                    <span class="error-msg" id="decimals-error-msg"></span>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="total-supply" tabindex="4" placeholder="Total Supply " oninvalid="setCustomValidity('Please Enter Total Supply ');" oninput="setCustomValidity('');"    required>
+                    <a href="javascript:void(0)"  onclick="showTotalTip()"><i id="info-supply" class="material-icons info">info</i></a>   
+                    <span class="error-msg" id="total-supply-error-msg"></span>
+                </div>
+                <div class="form-group" style="text-align: center;">
+                    <button  class="submit-button btn btn-primary" id="submit-btn" type="submit">Submit
+                    </button>
+                    <button  class="submit-button btn btn-primary hide_btn" id="btnAgain">Again
+                    </button>  
+                    <!-- Indicates a successful or positive action -->
+                    <a  href="https://explorer.ethoprotocol.com/tokens" target="_blank" class="btn btn-primary btn-lg ml-10">Token List</a>
+
+                    <a  href="https://github.com/Exlo84/etho-token-generator/blob/main/contracts/ERC20.sol" target="_blank" class="btn btn-success btn-lg ml-10"> SourceCode</a>
+
+                </div> 
+            </form>
+            <!--Asset Generator Form Ends here-->
+            <p id="statusText"></p>
+        </div>
+    </div>
+</div>
+ 
+<footer class="footer-area-2">
+    <!--Footer bottom-->
+    <div class="container">
+      <div class="copyright-area">
+        <div class="row">
+          <div class="col-lg-12 align-self-center text-center">
+            <p>
+                <img src="/assets/images/favicon.png" width="50" height="50"> 2022 <a href="https://github.com/Ether1Project">ETHO Protocol</a>
+            </p>
+          </div> 
+        </div>
+      </div>
+    </div>
+  </footer>
+
+<!--Libs-->
+<!--CDN for jquery and popper.js and bootstrap-->
+<script src="assets/js/jquery-3.3.1.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/web3.min.js"></script>
+<script src="assets/toastr/js/toastr.min.js"></script>
+<!--Core-->
+<script src="scripts/app.js"></script>
+</body>
+</html>

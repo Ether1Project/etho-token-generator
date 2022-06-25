@@ -1,0 +1,30 @@
+{
+  "name": "etho-token-generator",
+  "private": false,
+  "version": "0.0.1",
+  "description": "An ETHO Protocol ERC20 token creator, issue your own token on ETHO with just a few clicks",
+  "scripts": {
+    "start": "http-webnode ./ -p 4002 -c-1",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "http-webnode": "^1.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ether1Project/etho-token-generator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Ether1Project/etho-token-generator/issues"
+  },
+  "homepage": "https://github.com/Ether1Project/etho-token-generator#readme",
+  "author": "ETHO Protocol <admin@ethoprotocol.com>",
+  "license": "GLPv3",
+  "keywords": [
+    "ethereum",
+    "ERC20",
+    "token",
+    "asset",
+    "web3js"
+  ]
+}
